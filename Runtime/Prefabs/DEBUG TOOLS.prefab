@@ -1141,7 +1141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4494040157364804101}
   m_Layer: 0
-  m_Name: TESTING
+  m_Name: DEBUG TOOLS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1685,7 +1685,7 @@ GameObject:
   - component: {fileID: 2184199859783079997}
   - component: {fileID: 6660850216717808134}
   m_Layer: 0
-  m_Name: Test Manager
+  m_Name: MANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

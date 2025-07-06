@@ -3,12 +3,15 @@ using UnityEngine;
 
 namespace Knifest.DebugTools
 {
-    public class TestManager : MonoBehaviour
+    public class DebugManager : MonoBehaviour
     {
         [SerializeField] private GameObject _settings;
         [SerializeField] private Transform _fieldsContainer;
 
-        private List<ITestField> _fields = new List<ITestField>();
+        private List<ITestField> _fields = new();
+        
+        public Transform Container => _fieldsContainer;
+        public GameObject Settings => _settings;
 
         private void Awake()
         {
