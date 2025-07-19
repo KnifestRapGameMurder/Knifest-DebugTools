@@ -1,21 +1,24 @@
-﻿using UnityEngine;
+﻿using TriInspector;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Knifest.DebugTools
 {
-    public class IntTestField : TestField<int>
+    public class IntDebugField : DebugField<int>
     {
-        [SerializeField] private TMPro.TMP_InputField _input;
+        [Group(Tabs), Tab(Tab_Dev), SerializeField]
+        private TMPro.TMP_InputField input;
 
         public override void Init()
         {
-            _input.contentType = TMPro.TMP_InputField.ContentType.IntegerNumber;
+            input.contentType = TMPro.TMP_InputField.ContentType.IntegerNumber;
             base.Init();
-            _input.onValueChanged.AddListener(ParseValue);
+            input.onValueChanged.AddListener(ParseValue);
         }
 
         protected override void SetValueToUI(int value)
         {
-            _input.text = value.ToString();
+            input.text = value.ToString();
         }
 
         protected override int GetPrefsValue()

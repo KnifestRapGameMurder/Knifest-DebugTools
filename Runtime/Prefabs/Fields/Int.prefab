@@ -51,14 +51,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3685d0ab70e37454ba1fa8c98f498ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveKey: d03e8a97-f383-4590-a902-59bee377a742
-  _labelUI: {fileID: 8471634391649286341}
-  <OnInput>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
   <Label>k__BackingField: Int
   <DefaultValue>k__BackingField: 0
-  _input: {fileID: 8471634391776765457}
+  <OnValue>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  saveKey: d03e8a97-f383-4590-a902-59bee377a742
+  _labelUI: {fileID: 8471634391649286341}
+  input: {fileID: 8471634391776765457}
 --- !u!222 &8471634391197483519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101,8 +101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: -100, y: 50}
+  m_AnchoredPosition: {x: -150, y: 0}
+  m_SizeDelta: {x: -300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8471634391649286342
 CanvasRenderer:
@@ -238,7 +238,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -0.000030517578, y: 0}
-  m_SizeDelta: {x: 200, y: 70}
+  m_SizeDelta: {x: 300, y: 70}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8471634391776765459
 CanvasRenderer:

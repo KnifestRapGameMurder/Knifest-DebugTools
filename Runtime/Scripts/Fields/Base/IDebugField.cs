@@ -1,7 +1,7 @@
 ﻿
 namespace Knifest.DebugTools
 {
-    public interface ITestField
+    public interface IDebugField
     {
         void Init();
         void ResetToDefault();

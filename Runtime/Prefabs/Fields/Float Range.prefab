@@ -707,13 +707,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6518d817704882b43afaf2a19bc38dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveKey: d0742016-d107-4747-99a0-bd953372fab5
-  _labelUI: {fileID: 1647448691005101655}
-  <OnInput>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
   <Label>k__BackingField: Float Range
   <DefaultValue>k__BackingField: 0
+  <OnValue>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  saveKey: d0742016-d107-4747-99a0-bd953372fab5
+  _labelUI: {fileID: 1647448691005101655}
   _minValue: 0
   _maxValue: 1
   _slider: {fileID: 1647448691017964860}

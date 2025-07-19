@@ -1,17 +1,35 @@
 ﻿using System;
-using Knifest.DebugTools.PropertyAttributes;
+using TriInspector;
 using UnityEngine;
 
 namespace Knifest.DebugTools
 {
-    public abstract class TestField<T> : MonoBehaviour, ITestField
+    [DeclareTabGroup(Tabs)]
+    [DeclareBoxGroup(Tabs_Events, Title = "Events")]
+    public abstract class DebugField<T> : MonoBehaviour, IDebugField
     {
-        [SerializeField] [ReadOnly] private string saveKey;
+        protected const string Tabs = "Tabs";
+        protected const string Tab_User = "User";
+        protected const string Tab_Dev = "Dev";
+        protected const string Tabs_Events = Tabs + "/Events";
 
-        [SerializeField] private TMPro.TMP_Text _labelUI;
-        [field: SerializeField] protected UnityEngine.Events.UnityEvent<T> OnInput { get; private set; }
-        [field: SerializeField] protected string Label { get; private set; }
-        [field: SerializeField] protected T DefaultValue { get; set; }
+
+        [field: Group(Tabs), Tab(Tab_User), SerializeField]
+        protected string Label { get; private set; }
+
+        [field: Group(Tabs), Tab(Tab_User), SerializeField]
+        protected T DefaultValue { get; set; }
+
+        [field: Group(Tabs_Events), Tab(Tab_User), SerializeField]
+        protected UnityEngine.Events.UnityEvent<T> OnValue { get; private set; }
+
+
+        [Group(Tabs), Tab(Tab_Dev), SerializeField, ReadOnly]
+        private string saveKey;
+
+        [Group(Tabs), Tab(Tab_Dev)] [SerializeField]
+        private TMPro.TMP_Text _labelUI;
+
 
         public string SaveKey => saveKey;
         public T Value { get; protected set; }
@@ -35,7 +53,7 @@ namespace Knifest.DebugTools
                 SetValueToUI(Value);
             }
 
-            OnInput?.Invoke(Value);
+            OnValue?.Invoke(Value);
         }
 
         public void ResetToDefault()
@@ -47,7 +65,7 @@ namespace Knifest.DebugTools
         protected virtual void OnValueChanged(T value)
         {
             Value = value;
-            OnInput.Invoke(Value);
+            OnValue.Invoke(Value);
             SavePrefsValue();
         }
 
