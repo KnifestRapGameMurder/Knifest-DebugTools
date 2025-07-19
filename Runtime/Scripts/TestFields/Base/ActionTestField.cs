@@ -4,13 +4,13 @@ namespace Knifest.DebugTools
 {
     public abstract class ActionTestField<T> : MonoBehaviour
     {
-        [SerializeField] private TMPro.TMP_InputField _input;
-        [SerializeField] private UnityEngine.Events.UnityEvent<T> _onClick;
-        [SerializeField] private T _defaulValue;
+        [SerializeField] private TMPro.TMP_InputField input;
+        [SerializeField] private UnityEngine.Events.UnityEvent<T> onClick;
+        [SerializeField] private T defaultValue;
 
         public void OnButtonClick()
         {
-            _onClick?.Invoke(ParseInput(_input.text));
+            onClick?.Invoke(ParseInput(input.text));
             // _input.text = _defaulValue.ToString();
         }
 

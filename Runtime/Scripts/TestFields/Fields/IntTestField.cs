@@ -20,12 +20,12 @@ namespace Knifest.DebugTools
 
         protected override int GetPrefsValue()
         {
-            return PlayerPrefs.GetInt(Label);
+            return LoadInt();
         }
 
         protected override void SavePrefsValue()
         {
-            PlayerPrefs.SetInt(Label, Value);
+            SaveInt(Value);
         }
 
         private void ParseValue(string str)

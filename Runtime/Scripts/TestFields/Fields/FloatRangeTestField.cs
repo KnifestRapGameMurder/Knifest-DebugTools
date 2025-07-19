@@ -35,12 +35,12 @@ namespace Knifest.DebugTools
 
         protected override float GetPrefsValue()
         {
-            return PlayerPrefs.GetFloat(Label);
+            return LoadFloat();
         }
 
         protected override void SavePrefsValue()
         {
-            PlayerPrefs.SetFloat(Label, Value);
+            SaveFloat(Value);
         }
 
         private void TransformValue(float t)

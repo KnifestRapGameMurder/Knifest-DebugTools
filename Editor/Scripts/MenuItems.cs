@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 namespace Knifest.DebugTools.Editor
 {
-    [InitializeOnLoad]
     public static class MenuItems
     {
         private const string MenuPath = Names.Root + "/";

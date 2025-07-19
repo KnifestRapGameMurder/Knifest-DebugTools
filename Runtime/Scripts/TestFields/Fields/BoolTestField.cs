@@ -19,12 +19,12 @@ namespace Knifest.DebugTools
 
         protected override bool GetPrefsValue()
         {
-            return PlayerPrefs.GetInt(Label) != 0;
+            return LoadBool();
         }
 
         protected override void SavePrefsValue()
         {
-            PlayerPrefs.SetInt(Label, Value ? 1 : 0);
+            SaveBool(Value);
         }
     }
 }

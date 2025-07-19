@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 4494040157274137790}
   - component: {fileID: 5423422727910269308}
   m_Layer: 0
-  m_Name: Container
+  m_Name: -- CONTAINER -- (Edit here)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2913,9 +2913,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6039799400719095090, guid: a25af401b55464a48acde1929f7ce5c7, type: 3}
+      propertyPath: cachedName
+      value: Some1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039799400719095090, guid: a25af401b55464a48acde1929f7ce5c7, type: 3}
+      propertyPath: <Label>k__BackingField
+      value: Some1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7783857438328087279, guid: a25af401b55464a48acde1929f7ce5c7, type: 3}
+      propertyPath: m_text
+      value: Some1
+      objectReference: {fileID: 0}
     - target: {fileID: 8554249823064922435, guid: a25af401b55464a48acde1929f7ce5c7, type: 3}
       propertyPath: m_Name
-      value: Bool
+      value: Some1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

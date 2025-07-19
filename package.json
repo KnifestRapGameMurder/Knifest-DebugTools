@@ -6,7 +6,8 @@
   "unity": "2022.3",
   "author": "Knifest (https://github.com/KnifestRapGameMurder)",
   "dependencies": {
-    "com.unity.textmeshpro": "3.0.8"
+    "com.unity.textmeshpro": "3.0.8",
+    "com.flexus.triinspector": "https://github.com/Idegeron/Tri-Inspector-Flexus-Edition.git"
   },
   "samples": []
 }

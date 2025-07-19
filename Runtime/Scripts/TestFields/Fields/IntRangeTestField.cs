@@ -35,12 +35,12 @@ namespace Knifest.DebugTools
 
         protected override int GetPrefsValue()
         {
-            return PlayerPrefs.GetInt(Label);
+            return LoadInt();
         }
 
         protected override void SavePrefsValue()
         {
-            PlayerPrefs.SetInt(Label, Value);
+            SaveInt(Value);
         }
 
         private void TransformValue(float t)
@@ -48,6 +48,5 @@ namespace Knifest.DebugTools
             float value = Mathf.Lerp(_minValue, _maxValue, t);
             OnValueChanged((int)value);
         }
-
     }
 }
