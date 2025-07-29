@@ -708,12 +708,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Float Range
+  labelUI: {fileID: 1647448691005101655}
   <DefaultValue>k__BackingField: 0
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   saveKey: d0742016-d107-4747-99a0-bd953372fab5
-  _labelUI: {fileID: 1647448691005101655}
   _minValue: 0
   _maxValue: 1
   _slider: {fileID: 1647448691017964860}

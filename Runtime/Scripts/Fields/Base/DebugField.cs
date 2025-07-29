@@ -4,19 +4,8 @@ using UnityEngine;
 
 namespace Knifest.DebugTools
 {
-    [DeclareTabGroup(Tabs)]
-    [DeclareBoxGroup(Tabs_Events, Title = "Events")]
-    public abstract class DebugField<T> : MonoBehaviour, IDebugField
+    public abstract class DebugField<T> : BaseDebugField, IDebugField
     {
-        protected const string Tabs = "Tabs";
-        protected const string Tab_User = "User";
-        protected const string Tab_Dev = "Dev";
-        protected const string Tabs_Events = Tabs + "/Events";
-
-
-        [field: Group(Tabs), Tab(Tab_User), SerializeField]
-        protected string Label { get; private set; }
-
         [field: Group(Tabs), Tab(Tab_User), SerializeField]
         protected T DefaultValue { get; set; }
 
@@ -27,9 +16,6 @@ namespace Knifest.DebugTools
         [Group(Tabs), Tab(Tab_Dev), SerializeField, ReadOnly]
         private string saveKey;
 
-        [Group(Tabs), Tab(Tab_Dev)] [SerializeField]
-        private TMPro.TMP_Text _labelUI;
-
 
         public string SaveKey => saveKey;
         public T Value { get; protected set; }
@@ -39,7 +25,7 @@ namespace Knifest.DebugTools
             if (string.IsNullOrEmpty(saveKey)) saveKey = Guid.NewGuid().ToString();
 
             name = Label;
-            if (_labelUI != null) _labelUI.text = Label;
+            if (labelUI != null) labelUI.text = Label;
             SetValueToUI(DefaultValue);
         }
 

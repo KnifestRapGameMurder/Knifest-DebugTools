@@ -52,12 +52,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Int
+  labelUI: {fileID: 8471634391649286341}
   <DefaultValue>k__BackingField: 0
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   saveKey: d03e8a97-f383-4590-a902-59bee377a742
-  _labelUI: {fileID: 8471634391649286341}
   input: {fileID: 8471634391776765457}
 --- !u!222 &8471634391197483519
 CanvasRenderer:

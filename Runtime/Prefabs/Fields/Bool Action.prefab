@@ -271,12 +271,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Bool Action
+  labelUI: {fileID: 1179981828468412237}
   defaultValue: 0
   onClick:
     m_PersistentCalls:
       m_Calls: []
   input: {fileID: 0}
-  _labelUI: {fileID: 1179981828468412237}
   toggle: {fileID: 7737781948808821967}
 --- !u!1 &5609897621461769489
 GameObject:

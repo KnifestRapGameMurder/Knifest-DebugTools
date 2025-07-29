@@ -380,12 +380,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Int Range
+  labelUI: {fileID: 1828594721503382953}
   <DefaultValue>k__BackingField: 0
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   saveKey: 3e7e3cbd-39df-4db0-9a8a-017911a4e2cb
-  _labelUI: {fileID: 1828594721503382953}
   _minValue: 0
   _maxValue: 5
   _slider: {fileID: 1828594721263807732}

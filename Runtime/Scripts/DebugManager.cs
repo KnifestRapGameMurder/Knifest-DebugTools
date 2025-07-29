@@ -7,6 +7,7 @@ namespace Knifest.DebugTools
     {
         [SerializeField] private GameObject _settings;
         [SerializeField] private Transform _fieldsContainer;
+        [SerializeField] private bool stopTime;
 
         private List<IDebugField> _fields = new();
 
@@ -25,7 +26,7 @@ namespace Knifest.DebugTools
 
         public void OpenSettings()
         {
-            Time.timeScale = 0;
+            if (stopTime) Time.timeScale = 0;
             _settings.SetActive(true);
         }
 
@@ -39,7 +40,7 @@ namespace Knifest.DebugTools
         {
             PlayerPrefs.Save();
             _settings.SetActive(false);
-            Time.timeScale = 1;
+            if (stopTime) Time.timeScale = 1;
         }
     }
 }

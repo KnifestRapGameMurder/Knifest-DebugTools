@@ -247,12 +247,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Float Action
+  labelUI: {fileID: 8383976276101089600}
   defaultValue: 0
   onClick:
     m_PersistentCalls:
       m_Calls: []
   input: {fileID: 1993557030790597428}
-  _labelUI: {fileID: 8383976276101089600}
 --- !u!1 &2779891277152643614
 GameObject:
   m_ObjectHideFlags: 0

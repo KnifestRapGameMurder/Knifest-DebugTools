@@ -516,12 +516,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Float
+  labelUI: {fileID: 2544006450714173016}
   <DefaultValue>k__BackingField: 0
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   saveKey: ed2ba86c-e5f4-4236-af32-6151951d17eb
-  _labelUI: {fileID: 2544006450714173016}
   input: {fileID: 2544006449446224398}
 --- !u!222 &2544006449979491353
 CanvasRenderer:

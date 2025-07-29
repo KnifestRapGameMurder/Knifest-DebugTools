@@ -535,12 +535,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: String
+  labelUI: {fileID: 7163119188347532033}
   <DefaultValue>k__BackingField: 
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
   saveKey: c93e7245-37af-4a72-b746-826ffabda581
-  _labelUI: {fileID: 7163119188347532033}
   input: {fileID: 5548955277436191140}
 --- !u!1 &8972067076785859390
 GameObject:

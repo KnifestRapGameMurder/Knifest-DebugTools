@@ -927,12 +927,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: String Action
+  labelUI: {fileID: 3610162795541785037}
   defaultValue: 
   onClick:
     m_PersistentCalls:
       m_Calls: []
   input: {fileID: 566390859253779810}
-  _labelUI: {fileID: 3610162795541785037}
 --- !u!1 &6858028599956915787
 GameObject:
   m_ObjectHideFlags: 0

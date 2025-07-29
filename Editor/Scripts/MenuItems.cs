@@ -48,7 +48,7 @@ namespace Knifest.DebugTools.Editor
         [MenuItem(MenuPath + "Open Container", false, 1)]
         private static void ShowContainer()
         {
-            var manager = Object.FindObjectOfType<DebugManager>();
+            var manager = Object.FindObjectOfType<DebugManager>(true);
 
             if (manager == null)
             {
