@@ -379,12 +379,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70caca95ef2a12b4e96718ab126ce06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _labelUI: {fileID: 1828594721503382953}
-  <OnInput>k__BackingField:
+  <Label>k__BackingField: Int Range
+  labelUI: {fileID: 1828594721503382953}
+  <DefaultValue>k__BackingField: 0
+  <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  <Label>k__BackingField: Int Range
-  <DefaultValue>k__BackingField: 0
+  saveKey: 3e7e3cbd-39df-4db0-9a8a-017911a4e2cb
   _minValue: 0
   _maxValue: 5
   _slider: {fileID: 1828594721263807732}

@@ -2,9 +2,9 @@
 
 namespace Knifest.DebugTools
 {
-    public class FloatRangeTestField : TestField<float>
+    public class IntRangeDebugField : DebugField<int>
     {
-        [SerializeField] private float _minValue, _maxValue;
+        [SerializeField] private int _minValue, _maxValue;
         [SerializeField] private UnityEngine.UI.Slider _slider;
         [SerializeField] private string _valueFormat = "0.000";
         [SerializeField] private TMPro.TMP_Text _valueUI;
@@ -21,32 +21,32 @@ namespace Knifest.DebugTools
             _slider.onValueChanged.AddListener(TransformValue);
         }
 
-        protected override void OnValueChanged(float value)
+        protected override void OnValueChanged(int value)
         {
             base.OnValueChanged(value);
-            _valueUI.text = Value.ToString(_valueFormat);
+            SetValueToUI(Value);
         }
 
-        protected override void SetValueToUI(float value)
+        protected override void SetValueToUI(int value)
         {
             _slider.value = Mathf.InverseLerp(_minValue, _maxValue, value);
             _valueUI.text = value.ToString(_valueFormat);
         }
 
-        protected override float GetPrefsValue()
+        protected override int GetPrefsValue()
         {
-            return PlayerPrefs.GetFloat(Label);
+            return LoadInt();
         }
 
         protected override void SavePrefsValue()
         {
-            PlayerPrefs.SetFloat(Label, Value);
+            SaveInt(Value);
         }
 
         private void TransformValue(float t)
         {
             float value = Mathf.Lerp(_minValue, _maxValue, t);
-            OnValueChanged(value);
+            OnValueChanged((int)value);
         }
     }
 }

@@ -158,7 +158,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1463264144721425375
 GameObject:
@@ -421,13 +433,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997783fa6733bd340b9de47ba3f3e874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _labelUI: {fileID: 7783857438328087279}
-  <OnInput>k__BackingField:
+  <Label>k__BackingField: Bool
+  labelUI: {fileID: 7783857438328087279}
+  <DefaultValue>k__BackingField: 0
+  <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  <Label>k__BackingField: Bool
-  <DefaultValue>k__BackingField: 0
-  _toggle: {fileID: 7989669541584416746}
+  saveKey: df536724-d881-4576-b925-0497f4c062c6
+  <OnValueInverted>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnTrue>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  <OnFalse>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  toggle: {fileID: 7989669541584416746}
 --- !u!222 &2277275146097998477
 CanvasRenderer:
   m_ObjectHideFlags: 0
