@@ -47,7 +47,8 @@ A flexible, extensible in-game debug panel for Unity. Instantly view, edit, and 
 ### 3. Play and Debug
 
 - Enter Play mode. In the running game, look for the debug tools button (see icon below) in the corner of the screen.
-![Debug Tools Button Icon](image.png)
+
+  ![Debug Tools Button Icon](image.png)
 - Click this button to open or close the debug panel at runtime.
 - Use the debug panel to tweak values, trigger actions, and monitor changes in real time.
 
