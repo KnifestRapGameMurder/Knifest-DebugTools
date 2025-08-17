@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.1.0
+
+- Enum debug field supported
+
 ## 1.0.0
 
 - Initial release

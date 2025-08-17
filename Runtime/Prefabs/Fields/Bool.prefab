@@ -434,12 +434,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Bool
-  labelUI: {fileID: 7783857438328087279}
   <DefaultValue>k__BackingField: 0
+  labelUI: {fileID: 7783857438328087279}
+  saveKey: df536724-d881-4576-b925-0497f4c062c6
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  saveKey: df536724-d881-4576-b925-0497f4c062c6
   <OnValueInverted>k__BackingField:
     m_PersistentCalls:
       m_Calls: []

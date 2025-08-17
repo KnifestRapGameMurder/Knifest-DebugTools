@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Knifest.DebugTools.DebugFields;
 using UnityEngine;
 
 namespace Knifest.DebugTools

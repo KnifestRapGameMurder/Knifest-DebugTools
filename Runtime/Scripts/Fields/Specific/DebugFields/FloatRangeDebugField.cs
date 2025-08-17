@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Knifest.DebugTools
+namespace Knifest.DebugTools.DebugFields
 {
     public class FloatRangeDebugField : DebugField<float>
     {

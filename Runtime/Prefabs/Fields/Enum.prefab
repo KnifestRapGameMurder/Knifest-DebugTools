@@ -301,8 +301,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 30.4
+  m_fontSizeBase: 30.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -402,12 +402,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaad554737b44d748e7f26231daede1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Label>k__BackingField: fsfsfdfs
-  labelUI: {fileID: 0}
-  enumType:
-    rid: -2
-  input: {fileID: 0}
-  handler:
+  <Label>k__BackingField: Enum
+  <DefaultValue>k__BackingField: 0
+  labelUI: {fileID: 2544006450714173016}
+  saveKey: ff96594d-4e25-426e-9f1f-b5357411dd3a
+  <OnValue>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
+  input: {fileID: 6498895498480138014}
+  instruction:
     rid: -2
   references:
     version: 2
@@ -948,7 +951,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594751104115152041
 MonoBehaviour:

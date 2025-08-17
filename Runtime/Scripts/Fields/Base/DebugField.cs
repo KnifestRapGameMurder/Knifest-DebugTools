@@ -2,32 +2,14 @@
 using TriInspector;
 using UnityEngine;
 
-namespace Knifest.DebugTools
+namespace Knifest.DebugTools.DebugFields
 {
-    public abstract class DebugField<T> : BaseDebugField, IDebugField
+    public abstract class DebugField<T> : BaseDebugField<T>, IDebugField
     {
-        [field: Group(Tabs), Tab(Tab_User), SerializeField]
-        protected T DefaultValue { get; set; }
-
         [field: Group(Tabs_Events), Tab(Tab_User), SerializeField]
         protected UnityEngine.Events.UnityEvent<T> OnValue { get; private set; }
 
-
-        [Group(Tabs), Tab(Tab_Dev), SerializeField, ReadOnly]
-        private string saveKey;
-
-
-        public string SaveKey => saveKey;
         public T Value { get; protected set; }
-
-        protected virtual void OnValidate()
-        {
-            if (string.IsNullOrEmpty(saveKey)) saveKey = Guid.NewGuid().ToString();
-
-            name = Label;
-            if (labelUI != null) labelUI.text = Label;
-            SetValueToUI(DefaultValue);
-        }
 
         public virtual void Init()
         {
@@ -55,7 +37,6 @@ namespace Knifest.DebugTools
             SavePrefsValue();
         }
 
-        protected abstract void SetValueToUI(T value);
         protected abstract T GetPrefsValue();
         protected abstract void SavePrefsValue();
 
