@@ -1,5 +1,5 @@
 ﻿
-namespace Knifest.DebugTools
+namespace Knifest.DebugTools.DebugFields
 {
     public interface IDebugField
     {

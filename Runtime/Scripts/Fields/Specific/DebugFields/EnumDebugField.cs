@@ -1,37 +1,54 @@
-using System;
+using System.Collections.Generic;
 using TriInspector;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace Knifest.DebugTools
+namespace Knifest.DebugTools.DebugFields
 {
-    public class EnumDebugField : BaseDebugField
+    public class EnumDebugField : DebugField<int>
     {
-        [Group(Tabs), Tab(Tab_User), PropertyOrder(0), SerializeReference]
-        private Enum enumType;
-
         [Group(Tabs), Tab(Tab_Dev), SerializeField]
         private TMPro.TMP_Dropdown input;
 
-        [ReadOnly, SerializeReference] private object handler;
+        [Group(Tabs), Tab(Tab_User), SerializeReference]
+        private IEnumDebugFieldInstruction instruction;
 
-        private void OnValidate()
+        public override void Init()
         {
-            Debug.Log("OnValidate");
+            if (instruction != null)
+            {
+                input.ClearOptions();
+                input.AddOptions(instruction.GetOptions());
+            }
+
+            base.Init();
+            input.onValueChanged.AddListener(OnValueChanged);
         }
 
-        public void Test(RenderTextureFormat value)
+        protected override void SetValueToUI(int value)
         {
-            Debug.Log(value);
+            input.value = value;
         }
 
-        [Serializable]
-        private class Handler<T> where T : Enum
+        protected override int GetPrefsValue()
         {
-            public T DefaultValue;
-            public UnityEvent<T> OnValueChanged;
-
-            public T Value { get; protected set; }
+            return LoadInt();
         }
+
+        protected override void SavePrefsValue()
+        {
+            SaveInt(Value);
+        }
+
+        protected override void OnValueChanged(int value)
+        {
+            base.OnValueChanged(value);
+            instruction?.Invoke(value);
+        }
+    }
+
+    public interface IEnumDebugFieldInstruction
+    {
+        List<string> GetOptions();
+        void Invoke(int index);
     }
 }

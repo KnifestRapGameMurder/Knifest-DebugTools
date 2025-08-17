@@ -350,8 +350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Label>k__BackingField: Int Action
+  <DefaultValue>k__BackingField: 0
   labelUI: {fileID: 1179981828468412237}
-  defaultValue: 0
+  saveKey: 7a3a4817-37d5-4032-81b8-889a88ec712f
   onClick:
     m_PersistentCalls:
       m_Calls: []

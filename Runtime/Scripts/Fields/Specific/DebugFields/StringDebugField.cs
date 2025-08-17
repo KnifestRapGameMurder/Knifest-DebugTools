@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Knifest.DebugTools
+namespace Knifest.DebugTools.DebugFields
 {
     public class StringDebugField : DebugField<string>
     {

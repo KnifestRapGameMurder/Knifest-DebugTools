@@ -1,7 +1,7 @@
 using TriInspector;
 using UnityEngine;
 
-namespace Knifest.DebugTools
+namespace Knifest.DebugTools.DebugFields
 {
     public class BoolActionDebugField : ActionDebugField<bool>
     {
