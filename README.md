@@ -7,6 +7,23 @@ A flexible, extensible in-game debug panel for Unity. Instantly view, edit, and 
 
 ---
 
+# Table of Contents
+
+- [Features](#features)
+- [Supported Field Types](#supported-field-types)
+- [Installation](#installation)
+- [How to Use](#how-to-use)
+  - [Add the Debug Panel](#add-the-debug-panel)
+  - [Modify the Debug Panel](#modify-the-debug-panel)
+  - [Play and Debug](#play-and-debug)
+- [Enum Debug Fields](#enum-debug-fields)
+- [Editor Menu](#editor-menu)
+- [Roadmap / TODO](#roadmap--todo)
+
+
+
+
+
 ## Features
 
 - Debug int, float, bool, string, and enum fields
@@ -18,24 +35,47 @@ A flexible, extensible in-game debug panel for Unity. Instantly view, edit, and 
 
 ---
 
+## Supported Field Types
+
+Knifest-DebugTools provides several types of fields you can add to your debug panel:
+
+- **DebugFields**: Standard input fields for types like int, float, bool, string, and enum. These fields invoke a UnityEvent automatically whenever the value changes.
+  - Examples: IntDebugField, FloatDebugField, BoolDebugField, StringDebugField, EnumDebugField
+- **ActionDebugFields**: Input fields with an action button. The UnityEvent is only invoked when the button is pressed, not on every value change.
+  - Examples: IntActionDebugField, FloatActionDebugField, BoolActionDebugField, StringActionDebugField
+- **Simple Button**: You can also add a button without any input field, which simply invokes a UnityEvent when pressed.
+
+You can mix and match these field types in your debug panel to suit your workflow. All field prefabs are available in the prefab folder and can be dragged into the container as needed.
+
+---
+
+- Debug int, float, bool, string, and enum fields
+- UnityEvent support for field changes
+- Action buttons for methods
+- Easy to extend with your own field types
+- Minimal, clean UI
+- Editor menu integration for quick setup
+
+---
+
+
 
 ## Installation
-
 
 1. Copy the package into your Unity project's `Packages` or `Assets` folder.
 
 ---
 
 
+
 ## How to Use
 
-
-### 1. Add the Debug Panel
+### Add the Debug Panel
 
 - Use the Unity menu: `Knifest > Add DebugTools`, or right-click in the Hierarchy and select `Knifest > Add DebugTools`.
 - If a GameObject is selected, the debug panel will be added as its child.
 
-### 2. Modify the Debug Panel
+### Modify the Debug Panel
 
 - Open the container: `Knifest > Open Container`.
 - In the Hierarchy, find `-- CONTAINER -- (Edit here)`.
@@ -44,7 +84,7 @@ A flexible, extensible in-game debug panel for Unity. Instantly view, edit, and 
 - Select a field to edit its Label, Default Value, and link methods/properties to UnityEvents in the Inspector.
 - When finished editing, close the container using `Knifest > Close Container`.
 
-### 3. Play and Debug
+### Play and Debug
 
 - Enter Play mode. In the running game, look for the debug tools button (see icon below) in the corner of the screen.
 
