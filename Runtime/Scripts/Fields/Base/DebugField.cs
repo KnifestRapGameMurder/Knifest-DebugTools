@@ -39,19 +39,5 @@ namespace Knifest.DebugTools.DebugFields
 
         protected abstract T GetPrefsValue();
         protected abstract void SavePrefsValue();
-
-        #region SaveLoad
-
-        protected bool IsSaved() => PlayerPrefs.HasKey(SaveKey);
-        protected void SaveBool(bool value) => PlayerPrefs.SetInt(SaveKey, value ? 1 : 0);
-        protected bool LoadBool(bool defaultValue = false) => PlayerPrefs.GetInt(SaveKey, defaultValue ? 1 : 0) != 0;
-        protected void SaveInt(int value) => PlayerPrefs.SetInt(SaveKey, value);
-        protected int LoadInt(int defaultValue = 0) => PlayerPrefs.GetInt(SaveKey, defaultValue);
-        protected void SaveFloat(float value) => PlayerPrefs.SetFloat(SaveKey, value);
-        protected float LoadFloat(float defaultValue = 0) => PlayerPrefs.GetFloat(SaveKey, defaultValue);
-        protected void SaveString(string value) => PlayerPrefs.SetString(SaveKey, value);
-        protected string LoadString(string defaultValue = "") => PlayerPrefs.GetString(SaveKey, defaultValue);
-
-        #endregion
     }
 }

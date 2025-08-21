@@ -54,7 +54,7 @@ MonoBehaviour:
   <Label>k__BackingField: Int
   <DefaultValue>k__BackingField: 0
   labelUI: {fileID: 8471634391649286341}
-  saveKey: d03e8a97-f383-4590-a902-59bee377a742
+  saveKey: 
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []

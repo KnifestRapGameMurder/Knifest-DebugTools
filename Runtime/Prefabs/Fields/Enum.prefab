@@ -405,7 +405,7 @@ MonoBehaviour:
   <Label>k__BackingField: Enum
   <DefaultValue>k__BackingField: 0
   labelUI: {fileID: 2544006450714173016}
-  saveKey: ff96594d-4e25-426e-9f1f-b5357411dd3a
+  saveKey: 
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []

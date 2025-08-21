@@ -1,13 +1,21 @@
-﻿using UnityEngine;
+﻿using TriInspector;
+using UnityEngine;
 
 namespace Knifest.DebugTools.DebugFields
 {
     public class IntRangeDebugField : DebugField<int>
     {
-        [SerializeField] private int _minValue, _maxValue;
-        [SerializeField] private UnityEngine.UI.Slider _slider;
-        [SerializeField] private string _valueFormat = "0.000";
-        [SerializeField] private TMPro.TMP_Text _valueUI;
+        [Group(Tabs), Tab(Tab_User), SerializeField]
+        private int _minValue, _maxValue;
+
+        [Group(Tabs), Tab(Tab_Dev), SerializeField]
+        private UnityEngine.UI.Slider _slider;
+
+        [Group(Tabs), Tab(Tab_Dev), SerializeField]
+        private string _valueFormat = "0.000";
+
+        [Group(Tabs), Tab(Tab_Dev), SerializeField]
+        private TMPro.TMP_Text _valueUI;
 
         protected override void OnValidate()
         {
