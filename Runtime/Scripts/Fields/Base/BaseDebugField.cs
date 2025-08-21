@@ -26,33 +26,34 @@ namespace Knifest.DebugTools.DebugFields
         [Group(Tabs), Tab(Tab_Dev)] [SerializeField]
         protected TMPro.TMP_Text labelUI;
 
-        [Group(Tabs), Tab(Tab_Dev), SerializeField]
-        private string saveKey;
+        // [Group(Tabs), Tab(Tab_Dev), SerializeField]
+        // private string saveKey;
 
-        public string SaveKey => saveKey;
+        // public string SaveKey => saveKey;
+        public string SaveKey => Label;
 
         protected virtual void OnValidate()
         {
-            ManageSaveKey();
+            // ManageSaveKey();
             name = Label;
             if (labelUI != null) labelUI.text = Label;
             SetValueToUI(DefaultValue);
         }
 
-        private void ManageSaveKey()
-        {
-#if UNITY_EDITOR
-            // Skip if this is the prefab asset itself, not a scene instance
-            if (PrefabUtility.IsPartOfPrefabAsset(gameObject))
-                return;
-
-            // Also skip if we're in Prefab Editing Mode (the isolated prefab stage)
-            if (UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() != null)
-                return;
-#endif
-
-            if (string.IsNullOrEmpty(saveKey)) saveKey = Guid.NewGuid().ToString();
-        }
+//         private void ManageSaveKey()
+//         {
+// #if UNITY_EDITOR
+//             // Skip if this is the prefab asset itself, not a scene instance
+//             if (PrefabUtility.IsPartOfPrefabAsset(gameObject))
+//                 return;
+//
+//             // Also skip if we're in Prefab Editing Mode (the isolated prefab stage)
+//             if (UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() != null)
+//                 return;
+// #endif
+//
+//             if (string.IsNullOrEmpty(saveKey)) saveKey = Guid.NewGuid().ToString();
+//         }
 
         protected abstract void SetValueToUI(T value);
 

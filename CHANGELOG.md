@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.2.1
+
+- Label used as SaveKey
+
 ## 1.2.0
 
 - Color debug field supported
