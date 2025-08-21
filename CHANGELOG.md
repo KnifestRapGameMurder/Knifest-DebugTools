@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.2.0
+
+- Color debug field supported
+- SaveKey fixed
+
 ## 1.1.0
 
 - Enum debug field supported

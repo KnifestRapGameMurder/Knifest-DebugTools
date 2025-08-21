@@ -518,7 +518,7 @@ MonoBehaviour:
   <Label>k__BackingField: Float
   <DefaultValue>k__BackingField: 0
   labelUI: {fileID: 2544006450714173016}
-  saveKey: ed2ba86c-e5f4-4236-af32-6151951d17eb
+  saveKey: 
   <OnValue>k__BackingField:
     m_PersistentCalls:
       m_Calls: []

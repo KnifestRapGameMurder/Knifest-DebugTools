@@ -352,7 +352,7 @@ MonoBehaviour:
   <Label>k__BackingField: Int Action
   <DefaultValue>k__BackingField: 0
   labelUI: {fileID: 1179981828468412237}
-  saveKey: 7a3a4817-37d5-4032-81b8-889a88ec712f
+  saveKey: 
   onClick:
     m_PersistentCalls:
       m_Calls: []
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51
+  m_fontSize: 18
   m_fontSizeBase: 17.7
   m_fontWeight: 400
   m_enableAutoSizing: 1
