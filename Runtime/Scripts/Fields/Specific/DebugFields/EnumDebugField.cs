@@ -22,6 +22,7 @@ namespace Knifest.DebugTools.DebugFields
 
             base.Init();
             input.onValueChanged.AddListener(OnValueChanged);
+            instruction?.Invoke(Value);
         }
 
         protected override void SetValueToUI(int value)
